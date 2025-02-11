@@ -1,0 +1,15 @@
+<h1>Users Search</h1>
+
+<%= form_tag search_users_path, method: :get do %>
+  <%= text_field_tag :name, params[:name], placeholder: "Enter user name" %>
+  <%= submit_tag "Search" %>
+<% end %>
+
+<% if @users %>
+  <h2>Results:</h2>
+  <ul>
+    <% @users.each do |user| %>
+      <li><%= "#{user['name']} (#{user['email']})" %></li>
+    <% end %>
+  </ul>
+<% end %>

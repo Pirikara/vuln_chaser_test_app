@@ -118,6 +118,10 @@ GEM
       actionpack (>= 6.0.0)
       activesupport (>= 6.0.0)
       railties (>= 6.0.0)
+    interactor (3.1.2)
+    interactor-rails (2.3.0)
+      interactor (~> 3.0)
+      railties (>= 7.0)
     io-console (0.8.0)
     irb (1.14.3)
       rdoc (>= 4.0.0)
@@ -359,6 +363,7 @@ DEPENDENCIES
   capybara
   debug
   importmap-rails
+  interactor-rails (~> 2.0)
   jbuilder
   kamal
   propshaft
