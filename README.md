@@ -1,24 +1,36 @@
-# README
+# Vuln Chaser Test App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A Rails 8.0 application specifically designed to test and validate the vuln-chaser gem's detection capabilities.
 
-Things you may want to cover:
+https://github.com/Pirikara/vuln-chaser
 
-* Ruby version
+## Purpose
 
-* System dependencies
+This application contains intentionally vulnerable code patterns to:
+- Test vuln-chaser gem's detection accuracy
+- Compare results with other security tools (Brakeman, CodeQL)
+- Demonstrate advanced vulnerability patterns that may bypass standard security scanners
 
-* Configuration
+## Features
 
-* Database creation
+- User search functionality with dynamic query execution
+- Interactor pattern implementation using interactor-rails
+- Carefully crafted vulnerable patterns for testing
+- Security analysis setup with Brakeman and CodeQL
 
-* Database initialization
+## Setup
 
-* How to run the test suite
+```bash
+bundle install
+rails db:create db:migrate db:seed
+rails server
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+## Development
+This project uses:
 
-* Deployment instructions
-
-* ...
+- Ruby 3.x
+- Rails 8.0.1
+- SQLite3
+- interactor-rails
+- Brakeman for security scanning
