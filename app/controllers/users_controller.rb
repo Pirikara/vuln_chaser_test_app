@@ -3,7 +3,10 @@ class UsersController < ApplicationController
   end
 
   def search
-    result = UserSearch.call(name: params[:name])
+    result = UserSearch.call(
+      name: params[:name],
+      search_type: "name"
+    )
     @users = result.users
     render :index
   end
