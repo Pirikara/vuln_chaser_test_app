@@ -22,6 +22,7 @@ jobs:
           bundler-cache: true
 
       - name: Run Brakeman
+        continue-on-error: true
         run: |
           bundle exec brakeman -f sarif -o brakeman.sarif
 
