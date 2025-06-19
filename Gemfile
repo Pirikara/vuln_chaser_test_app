@@ -53,6 +53,9 @@ group :development, :test do
   gem "rubocop-rails-omakase", require: false
 end
 
+# VulnChaser IAST tool for integration testing  
+gem "vuln_chaser", path: "../vuln-chaser-ruby"
+
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"

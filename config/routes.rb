@@ -12,4 +12,9 @@ Rails.application.routes.draw do
       get :search
     end
   end
+  
+  # Simple test endpoints for VulnChaser
+  get '/test/sql', to: 'simple_test#sql_test'
+  post '/test/auth', to: 'simple_test#auth_test'
+  get '/test/health', to: 'simple_test#health'
 end
