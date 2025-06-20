@@ -17,7 +17,7 @@ module VulnChaserTestApp
     config.autoload_lib(ignore: %w[assets tasks])
     
     # VulnChaser IAST Middleware for vulnerability detection
-    config.middleware.use VulnChaser::EnhancedMiddleware
+    config.middleware.use VulnChaser::Middleware
 
     # Configuration for the application, engines, and railties goes here.
     #
